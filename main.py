@@ -186,6 +186,7 @@ def knapsack_solver(scenario_name: str, data: Union[str, int, float], prediction
     del K
     return dataframe
 
+
 # Load data
 X_data = pd.read_pickle('data/X_data.pkl')
 y_data = pd.read_pickle('data/y_data.pkl')
@@ -196,8 +197,7 @@ y_test = pd.read_pickle('data/y_test.pkl')
 estimated_salary = pd.read_pickle('data/processed/estimated_salary.pkl')
 
 # Load model and threshold
-model = CatBoostClassifier()
-model.load_model('models/model.cbm')
+model = pickle.load(open('models/model.pkl', 'rb'))
 threshold = pickle.load(open('models/threshold.pkl', 'rb'))
 yhat_proba = model.predict_proba(X_test)[: , 1]
 yhat = (yhat_proba >= threshold).astype(int)
