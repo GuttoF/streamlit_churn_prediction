@@ -22,11 +22,11 @@ st.markdown('''The bank is losing $15689143.58, that value represents *41.05%* o
 st.markdown('''The bank can deliver discount coupons to the top clients with highest probability of churn in simulation 1;''')
 st.markdown('''The bank can select the optimal combination of clients that maximize the total returned value , without exceeding the total constraint in simulation 2.
 
-Using the 0-1 knapsack-problem with probabilities with a budget of $10000.00:
+Using the 0-1 knapsack-problem with probabilities with a budget:
 - p(churn) >= 0.99: Client that will leave
 - 0.95 <= p(churn) < 0.99: Client with a high probability to stay with a $200 coupon;
 - 0.90 <= p(churn) < 0.99: Client that might stay with a $100 coupon;
-- p(churn) < 0.90: Client that might stay with a $500 coupon.''')
+- p(churn) < 0.90: Client that might stay with a $50 coupon.''')
 
 
 
