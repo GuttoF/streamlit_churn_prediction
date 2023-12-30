@@ -194,7 +194,7 @@ df2 = pd.read_pickle('data/df2.pkl')
 X_test = pd.read_pickle('data/X_test.pkl')
 y_test = pd.read_pickle('data/y_test.pkl')
 
-estimated_salary = pd.read_pickle('data/processed/estimated_salary.pkl')
+estimated_salary = pd.read_pickle('data/estimated_salary.pkl')
 
 # Load model and threshold
 model = pickle.load(open('models/model.pkl', 'rb'))
